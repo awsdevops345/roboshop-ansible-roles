@@ -1,0 +1,15 @@
+- name: import common role tasks
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-setup
+
+- name: import common role tasks
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs
+
+- name: start and enable catalogue
+  ansible.builtin.service:
+    name: catalogue
+    state: restarted
+    enabled: yes
