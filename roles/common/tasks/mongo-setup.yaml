@@ -9,7 +9,9 @@
     state: present
 
 - name: "get the catalogue entries count"
-  ansible.builtin.command:  "mongo --host mongodb.learnaws.online --quiet --eval 'db = db.getSiblingDB(\"catalogue\"); print(db.products.count())'"
+  ansible.builtin.command:  >
+        mongo --host mongodb.learnaws.online --quiet --eval |
+          'db = db.getSiblingDB("catalogue"); print(db.products.count())'
    register: products_count
    when: component == "catalogue"
 
