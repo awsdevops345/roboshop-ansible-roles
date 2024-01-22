@@ -3,11 +3,11 @@
    name: nginx
    state: present
 
-- name: enable & start
-  ansible.builtin.service:
-   name: nginx
-   state: restarted
-   enabled: yes
+# - name: enable & start
+#   ansible.builtin.service:
+#    name: nginx
+#    state: started
+#    enabled: yes
 
 - name: remove  html path
   ansible.builtin.file: 
@@ -21,7 +21,7 @@
 
 - name: download app
   ansible.builtin.get_url: 
-   url: curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip
+   url: https://roboshop-builds.s3.amazonaws.com/web.zip
    dest: /tmp
 
 - name: extract {{component}} application
