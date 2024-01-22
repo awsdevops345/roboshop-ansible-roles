@@ -11,12 +11,12 @@
 
 - name: remove  html path
   ansible.builtin.file: 
-   name : /usr/share/nginx/html/
+   name : /usr/share/nginx/html
    state: absent
 
 - name: create html path
   ansible.builtin.file: 
-   name : /usr/share/nginx/html/
+   name : /usr/share/nginx/html
    state: directory
 
 - name: download app
@@ -27,7 +27,7 @@
 - name: extract {{component}} application
   ansible.builtin.unarchive: 
    src: /tmp/web.zip
-   dest: /usr/share/nginx/html/
+   dest: /usr/share/nginx/html
    remote_src: yes
 
 - name: copy roboshop configuration
