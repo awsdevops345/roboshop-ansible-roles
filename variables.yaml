@@ -11,3 +11,4 @@ DISPATCH_HOST: dispatch.learnaws.online
 rq_user: roboshop
 rq_password : roboshop123
 shipping_version: 1.0
+mysql_password: RoboShop@1
