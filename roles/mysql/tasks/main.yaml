@@ -3,8 +3,8 @@
  
 - name: copy repo file
   ansible.builtin.copy:
-  src: mysql.repo
-  dest: /etc/yum.repos.d/
+   src: mysql.repo
+   dest: /etc/yum.repos.d/
 
 - name: install mysql community server
   ansible.builtin.command: dnf install mysql-community-server -y
