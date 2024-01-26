@@ -10,3 +10,4 @@ PAYMENT_HOST: payment.learnaws.online
 DISPATCH_HOST: dispatch.learnaws.online
 rq_user: roboshop
 rq_password : roboshop123
+shipping_version: shipping-1.0
