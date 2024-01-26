@@ -1,7 +1,8 @@
 - name: create roboshop user
   ansible.builtin.user:
     name: roboshop
-
+  become: yes
+  
 - name: Recursively remove app directory
   ansible.builtin.file:
     path: /app
@@ -11,7 +12,7 @@
   ansible.builtin.file:
     path: /app
     state: directory
-
+  
 - name: "download {{component}} application"
   ansible.builtin.get_url:
     url: "https://roboshop-builds.s3.amazonaws.com/{{component}}.zip"
