@@ -1,6 +1,6 @@
 - name: installing the rpm repo file
   ansible.builtin.dnf:
-   name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y 
+   name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
    state: present
    disable_gpg_check: true
 
